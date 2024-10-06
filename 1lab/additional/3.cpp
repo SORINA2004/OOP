@@ -1,3 +1,5 @@
+//Inheritance example
+
 #include <iostream>
 #include <string>
 using namespace std;
