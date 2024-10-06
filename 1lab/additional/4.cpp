@@ -1,3 +1,5 @@
+//Constructor and deconstructor example
+
 #include <iostream>
 #include <string>
 using namespace std;
