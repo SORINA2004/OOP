@@ -1,69 +1,45 @@
 #include <iostream>
-using namespace std;
 
-class CarteB;  // Declarație înainte de definirea clasei CarteB
+class BMW;  
 
-class CarteA {
+class Audi {
 private:
-    int dataCarteA;
+    int speed;  
 
 public:
-    CarteA(int val) : dataCarteA(val) {}
+    Audi(int s) : speed(s) {}
 
-    // Funcție friend care poate accesa membrii privați ai clasei CarteA
-    friend void showData(const CarteA& carteA, const CarteB& carteB);
-
-    // Metodă pentru a seta valoarea lui dataCarteA (pentru demonstrație)
-    void setDataCarteA(int val) {
-        dataCarteA = val;
-    }
-
-    // Metodă pentru a obține valoarea lui dataCarteA (pentru demonstrație)
-    int getDataCarteA() const {
-        return dataCarteA;
-    }
+    friend void compareSpeed(const Audi& a, const BMW& b);
 };
 
-class CarteB {
+class BMW {
 private:
-    int dataCarteB;
+    int speed;  
 
 public:
-    CarteB(int val) : dataCarteB(val) {}
+    BMW(int s) : speed(s) {}
 
-    // Funcție friend care poate accesa membrii privați ai clasei CarteB
-    friend void showData(const CarteA& carteA, const CarteB& carteB);
-
-    // Metodă pentru a seta valoarea lui dataCarteB (pentru demonstrație)
-    void setDataCarteB(int val) {
-        dataCarteB = val;
-    }
-
-    // Metodă pentru a obține valoarea lui dataCarteB (pentru demonstrație)
-    int getDataCarteB() const {
-        return dataCarteB;
-    }
+    friend void compareSpeed(const Audi& a, const BMW& b);
 };
 
-// Funcție friend care poate accesa datele private ale claselor CarteA și CarteB
-void showData(const CarteA& carteA, const CarteB& carteB) {
-    cout << "Data din clasa CarteA: " << carteA.dataCarteA << endl;
-    cout << "Data din clasa CarteB: " << carteB.dataCarteB << endl;
+// Funcția friend care accesează viteza privată din ambele clase și le compară
+void compareSpeed(const Audi& a, const BMW& b) {
+    std::cout << "Viteza Audi: " << a.speed << " km/h" << std::endl;
+    std::cout << "Viteza BMW: " << b.speed << " km/h" << std::endl;
+
+    if (a.speed > b.speed)
+        std::cout << "Audi este mai rapid." << std::endl;
+    else if (a.speed < b.speed)
+        std::cout << "BMW este mai rapid." << std::endl;
+    else
+        std::cout << "Ambele masini au aceeași viteză." << std::endl;
 }
 
 int main() {
-    CarteA carteA(10);   // Obiect al clasei CarteA
-    CarteB carteB(20);   // Obiect al clasei CarteB
+    Audi myAudi(220);  
+    BMW myBMW(240);    
 
-    // Afișează datele folosind funcția friend
-    showData(carteA, carteB);
-
-    // Modifică datele folosind metodele publice
-    carteA.setDataCarteA(30);
-    carteB.setDataCarteB(40);
-
-    // Afișează datele actualizate
-    showData(carteA, carteB);
+    compareSpeed(myAudi, myBMW);
 
     return 0;
 }
