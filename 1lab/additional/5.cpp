@@ -1,3 +1,5 @@
+//Friend class example
+
 #include <iostream>
 
 class BMW;  
