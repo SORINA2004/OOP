@@ -1,3 +1,6 @@
+
+//Encapsulation example
+
 #include <iostream>
 using namespace std;
 
