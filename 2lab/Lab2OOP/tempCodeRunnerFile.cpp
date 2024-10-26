@@ -1,0 +1,12 @@
+#include <iostream>
+#include <list>
+#include <stdbool.h>
+#include <cstdlib>
+#include <string>
+#include <fstream>
+#include <sstream>
+#include "Faculty.h"
+#include "FileManager.h"
+#include "Logger.h"
+#include "Functions.h"
+#include "GlobalVariables.h"

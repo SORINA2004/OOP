@@ -1,0 +1,8 @@
+[2024-10-26 16:36:02] INFO: Faculty FCIM was created
+[2024-10-26 16:36:27] INFO: Faculty FEE was created
+[2024-10-26 16:37:05] INFO: Student sorina was created
+[2024-10-26 16:37:11] INFO: Student sorina was assigned to the faculty fcim
+[2024-10-26 16:37:37] INFO: Students enrolled successfully
+[2024-10-26 16:37:51] INFO: Data saved successfully.
+[2024-10-26 16:38:08] INFO: Data loaded successfully.
+[2024-10-26 16:41:10] INFO: Data saved successfully.
