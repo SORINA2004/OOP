@@ -1,0 +1,7 @@
+INFO: Faculty was created
+INFO: Student was created
+INFO: Student was assigned to the faculty
+INFO: Student was graduated
+INFO: Faculty FCIM was created
+INFO: Student Victor was created
+INFO: Student Victor was assigned to the faculty
